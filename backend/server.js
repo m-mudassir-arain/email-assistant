@@ -4,7 +4,10 @@ import cors from 'cors';
 import Imap from 'imap';
 import { simpleParser } from 'mailparser';
 import dotenv from 'dotenv';
-import generateReply from './geminiService.js'; // Gemini API function
+// import generateReply from './geminiService.js'; // Gemini API function
+import { generateReply } from './geminiService.js';
+
+
 
 dotenv.config();
 
@@ -104,22 +107,14 @@ app.get('/emails', async (req, res) => {
 app.post('/generate-reply', async (req, res) => {
   const { email, tone } = req.body;
 
-  const prompt = `
-You are an AI assistant. Write a ${tone} reply to the following email:
-
-Subject: ${email.subject}
-From: ${email.from}
-Body: ${email.text}
-`;
-
   try {
-    const reply = await generateReply(prompt);
+    const reply = await generateReply(email, tone);
     res.json({ reply });
-  } catch (err) {
-    console.error('❌ Gemini Error:', err.message);
-    res.status(500).json({ error: 'Failed to generate reply' });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
 });
+
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`✅ IMAP server running on port ${PORT}`));
