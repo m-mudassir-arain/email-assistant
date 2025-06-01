@@ -1,12 +1,43 @@
-# React + Vite
+# 📧 AI Email Assistant – Built with React + Vite + Gemini AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An intelligent email assistant that reads your inbox via **IMAP**, understands your emails using **Gemini (NLP)**, and helps you **summarize**, **compose**, and **reply** to emails—fast and professionally.
 
-Currently, two official plugins are available:
+Built on a modern frontend stack: **React**, **Vite**, and **ESLint**, this project offers lightning-fast performance and scalable architecture.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ **React** – Declarative UI framework
+- ⚡ **Vite** – Instant hot reloads & fast bundling
+- 💬 **IMAP.js** – Email fetching via IMAP protocol
+- 🧠 **Gemini AI (Google NLP)** – Summarization, classification, reply suggestions
+- 🧹 **ESLint** – Linting for clean, readable code
+
+---
+
+## ✨ Features
+
+- 🔐 **Secure IMAP login** and email sync
+- 🧠 **Gemini NLP** powered:
+  - Email **summarization**
+  - AI-generated **email replies**
+  - Contextual **classification** (e.g., urgent, work, personal)
+- 📥 View and read real emails from your inbox
+- 📝 Compose smart emails with suggested phrasing
+- 🔁 Real-time development with **HMR**
+
+---
+
+## 📦 Installation & Usage
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/email-assistant.git
+cd email-assistant
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
